@@ -40,4 +40,4 @@ docker run -d -p 8080:80 app-codefactory
 4. Acesse no navegador: `http://localhost:8080`
 
 ## Licença
-MIT License
+MIT LicenseLinha conflitante na main
