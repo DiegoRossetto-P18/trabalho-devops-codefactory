@@ -1,0 +1,41 @@
+name: Integracao Continua
+
+on:
+  push:
+    branches:
+      - main
+      - desenvolvimento
+
+  pull_request:
+    branches:
+      - main
+      - desenvolvimento
+
+permissions:
+  contents: read
+
+jobs:
+  validar-arquivos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Verificar arquivos obrigatorios
+        run: |
+          test -f src/index.html
+          test -f src/style.css
+          test -f src/script.js
+          test -f Dockerfile
+
+  construir-container:
+    runs-on: ubuntu-latest
+    needs: validar-arquivos
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Construir imagem Docker
+        run: docker build -t app-codefactory:ci .
