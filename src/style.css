@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 60px 0 30px;
+}
+
+.cabecalho {
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cabecalho h1 {
+    margin-bottom: 12px;
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.cabecalho p {
+    max-width: 650px;
+    color: #59647a;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.painel {
+    padding: 30px;
+    border: 1px solid #dce3ef;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(23, 32, 51, 0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+
+.formulario {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.titulo-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 0 18px;
+}
+
+.titulo-lista span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+#mensagem-vazia {
+    padding: 24px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    color: #64748b;
+    text-align: center;
+}
+
+#lista-tarefas {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.tarefa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.tarefa span {
+    flex: 1;
+}
+
+.tarefa.concluida span {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.tarefa input {
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+.botao-excluir {
+    padding: 8px 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.botao-excluir:hover {
+    background: #fecaca;
+}
+
+footer {
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-top: 30px;
+    }
+
+    .formulario {
+        flex-direction: column;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+}
