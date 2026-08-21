@@ -1,43 +1,121 @@
 # Projeto DevOps - CodeFactory Solutions
 
-## Sobre o Projeto
-Trabalho prático para organizar o fluxo de desenvolvimento da CodeFactory Solutions usando cultura DevOps, padronizando o código e automatizando os processos.
+## Sobre o projeto
 
-## Objetivos
-- Organizar o versionamento do projeto com Git e GitHub
-- Criar container com Docker
-- Configurar pipeline simples de Integração Contínua (CI)
+Este projeto demonstra a adoção de práticas DevOps na empresa
+fictícia CodeFactory Solutions.
 
-## Tecnologias
-- Git e GitHub
-- Docker
-- GitHub Actions
-- HTML/JS
+Foi desenvolvida uma aplicação web para gerenciamento de tarefas,
+utilizando versionamento com Git e GitHub, colaboração por branches
+e Pull Requests, containerização com Docker e integração contínua
+com GitHub Actions.
 
-## Estrutura de Pastas
-codefactory-devops/
+## Objetivo
+
+Organizar e padronizar o fluxo de desenvolvimento da CodeFactory
+Solutions, tornando o processo mais colaborativo, automatizado
+e confiável.
+
+## Funcionalidades
+
+- Cadastro de tarefas;
+- Marcação de tarefas concluídas;
+- Exclusão de tarefas;
+- Armazenamento no navegador;
+- Execução em container Docker;
+- Verificação automática com GitHub Actions.
+
+## Tecnologias utilizadas
+
+- HTML5;
+- CSS3;
+- JavaScript;
+- Git;
+- GitHub;
+- Docker;
+- Nginx;
+- GitHub Actions.
+
+## Estrutura de pastas
+
+```text
+trabalho-devops-codefactory/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
 ├── src/
-│   └── index.html
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── .dockerignore
 ├── Dockerfile
 ├── LICENSE
 └── README.md
+```
 
-## Como Executar
+## Instalação
 
-1. Clone o repositório:
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+Clone o repositório:
 
-2. Entre na pasta:
-cd NOME_DO_REPOSITORIO
+```bash
+git clone https://github.com/Uninteertrabalho/trabalho-devops-codefactory.git
+```
 
-3. Rode o container Docker:
+Entre na pasta:
+
+```bash
+cd trabalho-devops-codefactory
+```
+
+## Execução sem Docker
+
+Abra o arquivo:
+
+```text
+src/index.html
+```
+
+Também é possível utilizar a extensão Live Server no VS Code.
+
+## Execução com Docker
+
+Construa a imagem:
+
+```bash
 docker build -t app-codefactory .
-docker run -d -p 8080:80 app-codefactory
+```
 
-4. Acesse no navegador: `http://localhost:8080`
+Execute o container:
+
+```bash
+docker run -d --name codefactory-container -p 8080:80 app-codefactory
+```
+
+Acesse:
+
+```text
+http://localhost:8080
+```
+
+## Integração contínua
+
+O projeto utiliza GitHub Actions para verificar os arquivos
+obrigatórios e construir automaticamente a imagem Docker.
+
+## Fluxo de desenvolvimento
+
+1. Criação de uma Issue;
+2. Criação de uma branch;
+3. Desenvolvimento e commits;
+4. Envio da branch;
+5. Criação de Pull Request;
+6. Revisão e merge.
+
+## Autores
+
+- Elaine Pereira Cavalcanti — RU: 5296077
+- Diego Rossetto Pereira — RU: 5338799
 
 ## Licença
-MIT LicenseLinha conflitante na main
+
+Este projeto utiliza a licença MIT.
