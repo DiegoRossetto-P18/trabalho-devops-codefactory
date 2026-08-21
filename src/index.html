@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeFactory Solutions</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <span class="etiqueta">
+                CodeFactory Solutions
+            </span>
+
+            <h1>Painel de tarefas</h1>
+
+            <p>
+                Organize as atividades da equipe de desenvolvimento
+                de maneira simples, colaborativa e eficiente.
+            </p>
+        </header>
+
+        <section class="painel">
+            <form id="form-tarefa">
+                <label for="campo-tarefa">
+                    Nova tarefa
+                </label>
+
+                <div class="formulario">
+                    <input
+                        type="text"
+                        id="campo-tarefa"
+                        placeholder="Ex.: Configurar pipeline"
+                        maxlength="80"
+                        required
+                    >
+
+                    <button type="submit">
+                        Adicionar
+                    </button>
+                </div>
+            </form>
+
+            <div class="titulo-lista">
+                <h2>Atividades</h2>
+
+                <span id="contador">
+                    0 tarefas
+                </span>
+            </div>
+
+            <p id="mensagem-vazia">
+                Nenhuma tarefa cadastrada.
+            </p>
+
+            <ul id="lista-tarefas"></ul>
+        </section>
+
+        <footer>
+            Projeto acadêmico de DevOps e Integração Contínua
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
