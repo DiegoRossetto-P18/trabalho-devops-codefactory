@@ -113,8 +113,8 @@ obrigatórios e construir automaticamente a imagem Docker.
 
 ## Autores
 
-- Elaine Pereira Cavalcanti — RU: 5296077
-- Diego Rossetto Pereira — RU: 5338799
+- Elaine Pereira Cavalcanti 
+- Diego Rossetto Pereira 
 
 ## Licença
 
